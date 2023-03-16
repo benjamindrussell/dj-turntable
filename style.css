@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "SF Pro";
+  src: url(SF-Pro.ttf)format("truetype")
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(OpenSans-Regular.ttf)format("truetype")
+}
+body {
+  font-family:"Open Sans";
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("dj-grayscale2.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav {
+  /* background-color:rgba(69, 98, 167, .8); */
+  font-size:1.25em;
+  grid-area:nav;
+  text-align:center;
+  padding:.5em;
+  margin:0px;
+  /*These next 4 lines make it stick at the top*/
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  z-index:999;
+  
+  
+}
+header{
+  grid-area: header;
+}
+header h1{
+  color: white;
+  font-size:300%;
+}
+header div{
+  padding:5% 10%;
+}
+#facebook{
+  margin-left:2%;
+}
+main{
+  grid-area:main;
+}
+footer{
+  grid-area:footer;
+  color:white;
+  background-color: rgba(50, 49, 171, .8);
+  text-align:center;
+}
+.nav-logo {
+  margin-left:0;
+  grid-area:nav-logo;
+}
+
+#logo {
+  max-height:2em;
+}
+.nav1 {
+  grid-area: nav1;
+}
+.nav2 {
+  grid-area: nav2;
+}
+.nav3 {
+  grid-area: nav3;
+}
+.nav4 {
+  grid-area: nav4;
+}
+.nav5 {
+  grid-area: nav5;
+}
+.nav6 {
+  grid-area: nav6;
+}
+.nav7 {
+  grid-area: nav7;
+}
+/*---------------------------Mobile Layout----------------------------*/
+#home-container {
+  grid-template-areas: 
+  "nav"
+  "header"
+  "main"
+  "footer";
+}
+#nav-container {
+  display:grid;
+  grid-template-areas:
+  "nav1"
+  "nav2"
+  "nav3"
+  "nav4"
+  "nav5"
+  "nav6"
+  "nav7"
+}
+.toggle-nav {
+  display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+}
+#flex-nav ul {
+  display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+  text-align:center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sub-menu1{
+  display:none;
+}
+
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+  display:grid;
+  background-color: #3231ab;
+  }
+  
+/* #flex-nav li {
+  padding-left:10px;
+  padding-top:10px;
+  
+  } */
+
+.menu-item {
+  color:white;
+  text-decoration:none;
+  padding: 1vmin 2vmin;
+  background-color: #3231ab;
+  border-radius:10vmin;
+  }
+#nav-logo{
+  background-color: transparent;
+}
+.menu-item:hover {
+  color: #9dff24;
+  padding: 1.25vmin 2.25vmin;
+  transition:.3s;
+  }
+/*---------------------------Tablet Layout----------------------------*/
+@media only screen and (min-width: 480px)  {
+  #home-container {
+    grid-template-areas: 
+    "nav"
+    "header main"
+    "footer";
+  }
+  #nav-container {
+    display:grid;
+    grid-template-areas:
+    "nav-logo"
+    "nav1"
+    "nav2"
+    "nav3"
+    "nav4"
+    "nav5" 
+    "nav6"
+    "nav7"
+  }
+}
+/*---------------------------Desktop Layout---------------------------*/
+@media only screen and (min-width: 960px)  {
+  #home-container {
+    grid-template-columns:33% 33% auto;
+    grid-template-areas: 
+    "nav nav nav"
+    "header header main"
+    "footer footer footer";
+  }
+  #nav-container {
+    display:grid;
+    grid-template-areas:
+    "nav-logo nav1 nav2 nav3 nav4 nav5 nav6 nav7";
+  }
+    
+.toggle-nav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+  }
+.nav-container {
+  padding:0;
+}
+#flex-nav ul {
+    display:grid;
+    text-align:center;
+  }
+  #flex-nav li {
+    padding:0px;
+    
+    }
+ 
+} 
