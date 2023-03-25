@@ -59,7 +59,7 @@ video[poster]{
  }
  header h1{
     color: white;
-    font-size:4vw;
+    
   }
   /* header div{
     margin:5% 5%;
@@ -245,6 +245,10 @@ video[poster]{
        "main"
        "footer";
    }
+   header h1{
+      font-size:3em;
+      
+    }
 }
 
 /*---------------------------Desktop Layout---------------------------*/
@@ -271,6 +275,10 @@ video[poster]{
     }
     .intro{
       text-align: left;
+    }
+    header h1{
+      font-size:3em;
+      
     }
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
