@@ -1,33 +1,106 @@
- /* Add a black background color to the top navigation */
+@font-face {
+    font-family: "Open Sans";
+    src: url(OpenSans-Regular.ttf)format("truetype")
+}
  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
-    text-decoration: none;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none; 
  }
  body {
     min-height:100vh;
+    background:#000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("dj-grayscale2.png");
     background-size: cover;
     background-attachment: fixed;
  }
- 
+ .container1{
+   display:grid;
+ }
  nav{
+    text-transform: capitalize;
     position:fixed;
     top:0; left:0; right:0;
-    background: #ffffff;
+    background:#3131abe9;
     padding:0px 7%;
     display:flex;
     align-items: center;
     justify-content:space-between ;
+    z-index:999;
+    grid-area: nav;
+ }
+figure{
+   padding:2%;
+   grid-area:figure;
+   display:flex;
+   flex-direction: row;
+   justify-content:center;
+   
+}
+video {
+width:426px;
+max-width:100%;
+min-height:240px; 
+border: 1px solid #3231ab;
+border-radius:3px;
+} 
+audio {
+   border: 1px solid #3231ab;
+   border-radius:3px;
+}
+video[poster]{
+   object-fit:cover; 
+}
+ header{
+    grid-area:header;
+    padding:5%;
+ }
+ header h1{
+    color: white;
+    font-size:4vw;
+  }
+  /* header div{
+    margin:5% 5%;
+  } */ 
+  #facebook{
+    margin-left:2%;
+  }
+ main{
+    grid-area:main;
+    margin-bottom:1%;
+    color:#ffffff;
+    padding:1%;
+ }
+ footer{
+    grid-area:footer;
+    color:white;
+    background-color:#3131aba5;
+    text-align:center;
+  }
+ nav .placeholder{
+    font-weight:bolder;
+    font-size:25px;
+    
+    color:transparent;
+ }
+ .logo{
+    position:absolute;
+    top:5px;
+    left:20px;
+    height:35px;
     z-index:1000;
  }
- nav .logo{
-    font-weight: bolder;
-    font-size:25px;
-    color:#333;
+ .small-logo{
+    display:none;
+    top:5px;
+    left:10px;
+    height:50px;
+    z-index:1000;
+ }
+ #active{
+    background:#3131abe9;
  }
  nav .navbar ul{
     list-style:none;
@@ -38,24 +111,26 @@
  }
  nav .navbar ul li a{
     font-size:20px;
-    padding:20px;
-    color:#333;
+    padding:10px 20px;
+    color:#ffffff;
     display:block;
  }
  nav .navbar ul li a:hover{
-    background:#333;
+    background:navy;
     color:#ffffff;
  }
  nav .navbar ul li ul{
     position:absolute;
     left:0;
     width:200px;
-    background: #ffffff;
+    background: #3131abe9;
     display:none;
  }
  nav .navbar ul li ul li{
     width:100%; 
-    border-top: 1px solid rgba(0,0,0,.1);
+    border-top: 1px solid navy;
+    background:#4562a7
+
 
  }
  nav .navbar ul li:focus-within > ul,
@@ -67,39 +142,162 @@
  }
  nav label{
     font-size: 20px;
-    color:#333;
+    color:#ffffff;
     cursor:pointer;
     display:none;
  }
-/*---------------------------Mobile Layout----------------------------*/
-/*---------------------------Tablet Layout----------------------------*/
-/* @media only screen and (min-width: 480px)  {
-
+ .spacer-area span{
+   color:transparent;
+ }
+ .intro{
+   grid-area: intro;
+   padding:5px;
+   text-align:center;
+   background: #3131aba5;
+ }
+ .intro p{
+   font-size:1.25em;
+ }
+ .DJ{
+   grid-area:dj;
+ }
+ .services{
+   grid-area:services;
+ }
+ .reviews{
+   grid-area:reviews;
+ }
+ .plus {
+   color:lime;
+ }
+ .nestedgrid1 div h3{
+   color:#95e712;
+ }
+ #homevid {
+   grid-area: homevid;
+ }
+ #homesong{
+   grid-area: homesong;
+ }
+ /* .emptydiv {
+   color:transparent;
+   grid-area:emptydiv;
+ } */
+ /* .figuregrid {
+   grid-template-columns: auto;
+   grid-template-areas: 
+   "homevid"
+   "hoemsong";
 } */
+/*---------------------------Mobile Layout----------------------------*/
+.spacer-area{
+   grid-area:spacer;
+   height:75px;
+}
 
+.nestedgrid1 {
+   
+   display:grid;
+   grid-template-columns: auto;
+   grid-gap:1%;
+   grid-template-areas:
+   "intro"
+   "dj"
+   "services"
+   "reviews";
+}
+.container1{
+   display:grid;
+    grid-template-columns: auto; 
+    grid-template-areas:
+    "nav"
+    "spacer"
+    "header"
+    "figure"
+    "main"
+    "footer";
+}
+
+/*---------------------------Tablet Layout----------------------------*/
+@media only screen and (min-width: 480px) {
+   .spacer-area{
+      height:75px;
+   }
+   .nestedgrid1 {
+   
+      display:grid;
+      grid-template-columns: auto;
+      grid-gap:1%;
+      grid-template-areas:
+      "intro"
+      "dj"
+      "services"
+      "reviews";
+   }
+   .container1{
+      display:grid;
+       grid-template-columns: auto; 
+       grid-template-areas:
+       "nav"
+       "spacer"
+       "header"
+       "figure"
+       "main"
+       "footer";
+   }
+}
 
 /*---------------------------Desktop Layout---------------------------*/
-/* @media only screen and (min-width: 960px){
-
-}*/
-@media only screen and (max-width:991px){
+@media only screen and (min-width: 961px){
+   .spacer-area{
+      height:55px;
+   }
+   .nestedgrid1{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+      "intro intro intro"
+      "dj services reviews";
+   }
+    .container1{
+        display:grid;
+        grid-template-columns: 1fr 1fr auto;
+        grid-template-areas:
+        "nav nav nav"
+        "spacer spacer spacer"
+        "header header figure"
+        "main main main"
+        "footer footer footer";
+    }
+    .intro{
+      text-align: left;
+    }
+}
+/*---------------------------Mobile and Tablet Layout----------------------------*/
+@media only screen and (max-width: 480px) {
+   header{
+      padding-top:100px;
+   }
+}
+@media only screen and (max-width:960px){
     nav{
         padding:20px;
-
     }
     nav label{
         display: initial;
+        margin:10px;
     }
     nav .navbar{
         position:absolute;
         top:100%; left:0; right:0;
-        background:#fff;
-        border-top: 1px solid rgba(0,0,0,.1);
+        background:#3131abe9;
+        border-top: 1px solid navy;
         display:none;
 
     }
     nav .navbar ul li{
         width: 100%;
+        border-top: 1px solid navy;
 
     }
     nav .navbar ul li ul{
@@ -107,9 +305,32 @@
         width:100%;
     }
     nav .navbar ul li ul li{
-        background:#eee;
+        background:#4562a7
+;
     }
     #menu-bar:checked ~ .navbar{
         display: initial;
+    }
+} 
+@media only screen and(max-width:1050px) and(min-width:960px){
+   nav {
+      padding:10px;
+    }
+}
+@media only screen and (max-width:1050px){
+   nav {
+      padding:10px;
+    }
+    nav .placeholder{
+        display:none;
+    }
+    .logo{
+        display:none;
+        z-index:0;
+    }
+    .small-logo{
+        display: initial;
+        position:absolute;
+        z-index:1000;
     }
 }
