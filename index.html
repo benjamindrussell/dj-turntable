@@ -5,11 +5,12 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="script.js"></script>
+        
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="icon" href="DJ_Turntable_LOGO_2.png">
     </head>
     <body>
+        
         <div class="container1">
             <!-- <a href="#"><img class="logo" src="DJ_Turntable_LOGO_3.png"></a> -->
             <!-- <a href="#"><img class="small-logo" src="DJ_Turntable_LOGO_1.png"></a> -->
@@ -17,24 +18,28 @@
                 <a href="#"><img class="small-logo" src="DJ_Turntable_LOGO_1.png"></a>
                 <a href="#"><img class="logo" src="DJ_Turntable_LOGO_3.png"></a>
                 <br>
-                <a href="#" class="placeholder">LOGO</a>
-                <input type="checkbox" id="menu-bar">
-                <label for="menu-bar">Menu</label>
+                <a href="#" class="placeholder">LO</a>
+                <!-- <input type="checkbox" id="menu-bar">
+                <label for="menu-bar">Menu</label> -->
+                <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                  </div>
+                  
                 <div class="navbar">
                     <ul>
                         <li><a href="#">about <span class="plus">+</span></a>
-                            <ul>
-                                <li><a href="#">My Story</a></li>
+                            <ul class = "dropdown-menu1">
+                                <li class="dropdown-item1"><a href="#">My Story</a></li>
                             </ul>
                         </li>
                         
                         <li><a href="#">packages</a></li>
                         <li><a href="#">events <span class="plus">+</span></a>
-                            <ul>
-                                <li><a href="#">weddings</a></li>
-                                <li><a href="#">school celebrations</a></li>
-                                <li><a href="#">corporate events</a></li>
-                                <li><a href="#">special occasions</a></li>
+                            <ul class = "dropdown-menu2">
+                                <li class = "dropdown-item1"><a href="#">weddings</a></li>
+                                <li class = "dropdown-item2"><a href="#">school celebrations</a></li>
+                                <li class = "dropdown-item3"><a href="#">corporate events</a></li>
+                                <li class = "dropdown-item4"><a href="#">special occasions</a></li>
                             </ul>
                         </li>    
                         <li><a href="#">reviews</a></li>
@@ -43,6 +48,7 @@
                         <li><a href="#">contact</a></li>
                     </ul>
             </div>
+            <script src="main.js"></script>
             </nav>
             <div class="spacer-area">
                 <span>placeholder</span>
