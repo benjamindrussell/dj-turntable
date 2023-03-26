@@ -102,8 +102,10 @@ video[poster]{
  #active{
     background:#3131abe9;
  }
+ 
  nav .navbar ul{
     list-style:none;
+    
  }
  nav .navbar ul li{
     position:relative;
@@ -123,23 +125,134 @@ video[poster]{
     position:absolute;
     left:0;
     width:200px;
-    background: #3131abe9;
-    display:none;
+    /* background: #3131abe9; */
+    /* display:none; */
  }
  nav .navbar ul li ul li{
     width:100%; 
     border-top: 1px solid navy;
-    background:#4562a7
-
+    background:#4562a7;
+    display:none; 
+    opacity:0;
 
  }
- nav .navbar ul li:focus-within > ul,
+ nav .navbar.touch ul li:focus-within > ul{
+   display: initial;
+ }
  nav .navbar ul li:hover > ul{
     display: initial;
  }
- #menu-bar{
-    display:none;
+ nav .navbar.touch ul li:focus-within > .dropdown-menu2 > li{
+   display: initial;
  }
+ nav .navbar ul li:hover > .dropdown-menu2 > li{
+    display: initial;
+ }
+ /* .dropdown-menu2 > li {
+   display:none;
+ } */
+
+ nav .navbar.touch ul li:focus-within > .dropdown-menu1 > li{
+   display: initial;
+ }
+ nav .navbar ul li:hover > .dropdown-menu1 > li{
+    display: initial;
+ }
+
+ .dropdown-menu1 > .dropdown-item1 {
+   transform-origin: top center;
+   animation: translateY 300ms 70ms ease-in-out forwards;
+ }
+
+ .dropdown-menu2 > .dropdown-item1 {
+   transform-origin: top center;
+   animation: translateY 300ms 45ms ease-in-out forwards;
+ }
+ .dropdown-menu2 > .dropdown-item2 {
+   transform-origin: top center;
+   animation: translateY 300ms 90ms ease-in-out forwards;
+ }
+ .dropdown-menu2 > .dropdown-item3 {
+   transform-origin: top center;
+   animation: translateY 300ms 135ms ease-in-out forwards;
+ }
+ .dropdown-menu2 > .dropdown-item4 {
+   transform-origin: top center;
+   animation: translateY 300ms 170ms ease-in-out forwards;
+ }
+ @keyframes translateY{
+   0% {
+      
+      opacity: 0;
+      transform: translateY(-40px);
+   }
+   80% {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0px);
+      display:initial;
+   }
+ } 
+ /* #menu-bar{
+    display:none;
+ } */
+ .menu-btn {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   transition: all .35s ;
+   /* border: 3px solid #fff; */
+ }
+ .menu-btn__burger {
+   display: none;
+   width: 40px;
+   height: 6px;
+   background: #fff;
+   border-radius: 5px;
+   
+   transition: all .35s ;
+ }
+ .menu-btn__burger::before{
+   display:none;
+ }
+ .menu-btn__burger::before,
+ .menu-btn__burger::after {
+   display:none;
+   content: '';
+   position: absolute;
+   width: 40px;
+   height: 6px;
+   background: #fff;
+   border-radius: 5px;
+   
+   transition: all .35s ;
+ }
+ .menu-btn__burger::before {
+   transform: translateY(-16px);
+ }
+ .menu-btn__burger::after {
+   transform: translateY(16px);
+ }
+ /* ANIMATION */
+ .menu-btn.open .menu-btn__burger {
+   transform: translateX(-40px);
+   background: transparent;
+   box-shadow: none;
+ }
+ .menu-btn.open .menu-btn__burger::before {
+   transform: rotate(45deg) translate(35px, -35px);
+ }
+ .menu-btn.open .menu-btn__burger::after {
+   transform: rotate(-45deg) translate(35px, 35px);
+ }
+
  nav label{
     font-size: 20px;
     color:#ffffff;
@@ -166,6 +279,7 @@ video[poster]{
  }
  .reviews{
    grid-area:reviews;
+   
  }
  .plus {
    color:lime;
@@ -249,6 +363,7 @@ video[poster]{
       font-size:3em;
       
     }
+    
 }
 
 /*---------------------------Desktop Layout---------------------------*/
@@ -280,6 +395,8 @@ video[poster]{
       font-size:3em;
       
     }
+    
+    
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
 @media only screen and (max-width: 480px) {
@@ -316,9 +433,28 @@ video[poster]{
         background:#4562a7
 ;
     }
-    #menu-bar:checked ~ .navbar{
+    /* #menu-bar:checked ~ .navbar{
         display: initial;
+    } */
+    .menu-btn__burger {
+      display:flex;
     }
+    .menu-btn__burger::before {
+      display:flex;
+    }
+    .menu-btn__burger::after {
+      display:flex;
+    }
+    .navbar {
+      display:none;
+    }
+    .navbar.on{
+      display:initial;
+    }
+    .navbar.on a {
+      min-width:100%;
+    }
+    
 } 
 @media only screen and(max-width:1050px) and(min-width:960px){
    nav {
