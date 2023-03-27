@@ -79,6 +79,15 @@ video[poster]{
     background-color:#3131aba5;
     text-align:center;
   }
+
+
+
+
+
+
+
+
+  /*---------------------------For Nav----------------------------*/
  nav .placeholder{
     font-weight:bolder;
     font-size:25px;
@@ -99,8 +108,8 @@ video[poster]{
     height:50px;
     z-index:1000;
  }
- #active{
-    background:#3131abe9;
+ .active{
+    background:navy;
  }
  
  nav .navbar ul{
@@ -196,6 +205,23 @@ video[poster]{
       display:initial;
    }
  } 
+
+ @keyframes translateX{
+  0% {
+     
+     opacity: 0;
+     transform: translateX(70px);
+  }
+  80% {
+     opacity: 0;
+     transform: translateX(-10px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0px);
+     display:initial;
+  }
+} 
  /* #menu-bar{
     display:none;
  } */
@@ -259,9 +285,24 @@ video[poster]{
     cursor:pointer;
     display:none;
  }
+
+
+
+
+
  .spacer-area span{
    color:transparent;
  }
+
+
+
+
+
+
+
+
+
+ /*---------------------------For Homepage main----------------------------*/
  .intro{
    grid-area: intro;
    padding:5px;
@@ -293,6 +334,7 @@ video[poster]{
  #homesong{
    grid-area: homesong;
  }
+
  /* .emptydiv {
    color:transparent;
    grid-area:emptydiv;
@@ -308,7 +350,6 @@ video[poster]{
    grid-area:spacer;
    height:75px;
 }
-
 .nestedgrid1 {
    
    display:grid;
@@ -454,6 +495,7 @@ video[poster]{
     .navbar.on a {
       min-width:100%;
     }
+
     
 } 
 @media only screen and(max-width:1050px) and(min-width:960px){
