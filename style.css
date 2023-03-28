@@ -2,7 +2,7 @@
     font-family: "Open Sans";
     src: url(OpenSans-Regular.ttf)format("truetype")
 }
- * {
+ *, *:before, *:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
     text-decoration: none; 
  }
  body {
-    min-height:100vh;
+    height:100vh;
     background:#000000;
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("dj-grayscale2.png");
     background-size: cover;
@@ -38,6 +38,10 @@ figure{
    flex-direction: row;
    justify-content:center;
    
+}
+section{
+  grid-area: section;
+  color:white;
 }
 video {
 width:426px;
@@ -335,6 +339,74 @@ video[poster]{
    grid-area: homesong;
  }
 
+/*---------------------------For Swiper----------------------------*/
+.swiper-container {
+  width: 100vw;
+  height: 56vw;
+  transition: opacity .6s ease;
+  }
+  
+  .swiper-container.swiper-container-coverflow {
+  padding-top: 2%;
+  }
+  
+  .swiper-container.loading {
+  opacity: 0;
+  visibility: hidden;
+  }
+  
+  .swiper-container:hover .swiper-button-prev,
+  .swiper-container:hover .swiper-button-next {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  }
+  
+  .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  
+  }
+  
+  .swiper-slide .entity-img {
+      display: none;
+  }
+  
+  .swiper-slide .content {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 50%;
+  padding-left: 5%;
+  color: #fff;
+  }
+  
+  .swiper-slide .content .title {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  }
+  
+  .swiper-slide .content .caption {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  }
+  
+  [class^="swiper-button-"] {
+  width: 44px;
+  opacity: 0;
+  visibility: hidden;
+  }
+  
+  .swiper-button-prev {
+  transform: translateX(50px);
+  }
+  
+  .swiper-button-next {
+  transform: translateX(-50px);
+  }
+
  /* .emptydiv {
    color:transparent;
    grid-area:emptydiv;
@@ -372,7 +444,17 @@ video[poster]{
     "main"
     "footer";
 }
-
+.containerG{ /*for gallery*/
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "nav"
+  "spacer"
+  "header"
+  "section"
+  "main"
+  "footer"
+}
 /*---------------------------Tablet Layout----------------------------*/
 @media only screen and (min-width: 480px) {
    .spacer-area{
@@ -400,6 +482,17 @@ video[poster]{
        "main"
        "footer";
    }
+   .containerG{ /*for gallery*/
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "nav"
+    "spacer"
+    "header"
+    "section"
+    "main"
+    "footer"
+}
    header h1{
       font-size:3em;
       
@@ -419,7 +512,7 @@ video[poster]{
       "intro intro intro"
       "dj services reviews";
    }
-    .container1{
+    .container1{ /*for home page*/
         display:grid;
         grid-template-columns: 1fr 1fr auto;
         grid-template-areas:
@@ -429,6 +522,17 @@ video[poster]{
         "main main main"
         "footer footer footer";
     }
+    .containerG{ /*for gallery*/
+      display:grid;
+      grid-template-columns: auto;
+      grid-template-areas:
+      "nav"
+      "spacer"
+      "header"
+      "section"
+      "main"
+      "footer"
+  }
     .intro{
       text-align: left;
     }
@@ -436,7 +540,9 @@ video[poster]{
       font-size:3em;
       
     }
-    
+    .swiper-container {
+      height: 28vw;
+  }
     
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
