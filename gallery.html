@@ -6,12 +6,12 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="icon" href="DJ_Turntable_LOGO_2.png">
     </head>
     <body>
         
-        <div class="container1">
+        <div class="containerG">
             <!-- <a href="#"><img class="logo" src="DJ_Turntable_LOGO_3.png"></a> -->
             <!-- <a href="#"><img class="small-logo" src="DJ_Turntable_LOGO_1.png"></a> -->
             <nav>
@@ -27,32 +27,100 @@
                   
                 <div class="navbar">
                     <ul>
-                        <li><a href="about.html" id="about" class="active" onclick="aboutClick()">about <span class="plus">+</span></a>
+                        <li><a href="about.html" id="about" onclick="aboutClick()">about <span class="plus">+</span></a>
                             <ul class = "dropdown-menu1">
-                                <li class="dropdown-item1"><a href="#">My Story</a></li>
+                                <li class="dropdown-item1"><a href="story.html">My Story</a></li>
                             </ul>
                         </li>
                         
                         <li><a href="#">packages</a></li>
                         <li><a href="events.html" id="events" onclick="eventClick()">events <span class="plus">+</span></a>
                             <ul class = "dropdown-menu2">
-                                <li class = "dropdown-item1"><a href="#">weddings</a></li>
-                                <li class = "dropdown-item2"><a href="#">school celebrations</a></li>
-                                <li class = "dropdown-item3"><a href="#">corporate events</a></li>
-                                <li class = "dropdown-item4"><a href="#">special occasions</a></li>
+                                <li class = "dropdown-item1"><a href="weddings.html">weddings</a></li>
+                                <li class = "dropdown-item2"><a href="celebrations.html">school celebrations</a></li>
+                                <li class = "dropdown-item3"><a href="corporare.html">corporate events</a></li>
+                                <li class = "dropdown-item4"><a href="occasions.html">special occasions</a></li>
                             </ul>
                         </li>    
-                        <li><a href="#">reviews</a></li>
-                        <li><a href="#">gallery</a></li>
-                        <li><a href="#">resources</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="reviews.html">reviews</a></li>
+                        <li><a href="gallery.html" class="active">gallery</a></li>
+                        <li><a href="resources.html">resources</a></li>
+                        <li><a href="contact.html">contact</a></li>
                     </ul>
             </div>
-            <script src="main.js"></script>
+            
             </nav>
             <div class="spacer-area">
                 <span>placeholder</span>
             </div>
+            <header>
+                <h1>Everybody Looks Like They're Having a Great Time!</h1>
+            </header>
+            <section>
+                <h2>Take a look at some of the many celebrations that DJ Turntable has entertained with the magic of music and lighting.</h2>
+            </section>
+            <main class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(gallery1.jpg)">
+                      <img src="gallery1.jpg" class="entity-img" />
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">DJ Turntable</p>
+                        
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="swiper-slide" style="background-image:url(gallery2.jpg)">
+                     
+                      <img src="gallery2.jpg" class="entity-img" />
+                      
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Weddings</p>
+                        
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="swiper-slide" style="background-image:url(gallery3.jpg)">
+                      <img src="gallery3.jpg" class="entity-img" />
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Corporate events</p>
+                        
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(gallery4.jpg)">
+                      <img src="gallery4.jpg" class="entity-img" />
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Birthday Parties</p>
+                        
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(gallery5.jpg)">
+                      <img src="gallery5.jpg" class="entity-img" />
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Daft Punk</p>
+                       
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(gallery6.jpg)">
+                      <img src="gallery6.jpg" class="entity-img" />
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Deadmau5</p>
+                       
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev swiper-button-white"></div>
+                  <div class="swiper-button-next swiper-button-white"></div>
+            </main>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+            <script src="main.js"> </script>
             <footer>
                 <p>©2023. DJ Turntable, Inc. All Rights Reserved</p>
                 <p>1 Quiet Valley Lane, Sepulveda CA 91343</p>
