@@ -41,7 +41,8 @@ figure{
 }
 section{
   grid-area: section;
-  color:white;
+  color:#95e712;
+  padding:0 5%;
 }
 video {
 width:426px;
@@ -61,6 +62,10 @@ video[poster]{
     grid-area:header;
     padding:5%;
  }
+ .headerG {
+  padding:1% 5%
+ }
+
  header h1{
     color: white;
     
@@ -70,7 +75,11 @@ video[poster]{
   } */ 
   #facebook{
     margin-left:2%;
+    /* transition: 0.2s ease-in-out; */
   }
+  /* #facebook:hover{
+    transform: translateY(-10px);
+  } */
  main{
     grid-area:main;
     margin-bottom:1%;
@@ -82,6 +91,7 @@ video[poster]{
     color:white;
     background-color:#3131aba5;
     text-align:center;
+    margin-top:3%;
   }
 
 
@@ -344,6 +354,7 @@ video[poster]{
   width: 100vw;
   height: 56vw;
   transition: opacity .6s ease;
+  
   }
   
   .swiper-container.swiper-container-coverflow {
@@ -420,7 +431,7 @@ video[poster]{
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
    grid-area:spacer;
-   height:75px;
+   height:0;
 }
 .nestedgrid1 {
    
@@ -547,7 +558,7 @@ video[poster]{
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
 @media only screen and (max-width: 480px) {
-   header{
+   header, .headerG{
       padding-top:100px;
    }
 }
