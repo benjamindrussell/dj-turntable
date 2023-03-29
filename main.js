@@ -16,13 +16,13 @@ async function sleep(seconds) {
   return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
 }
 async function eventClick () {
-  await sleep(1);
+  await sleep(.1);
   if(isTouchSupported){
     document.getElementById("events").setAttribute("href", "events.html"); 
   }
 }
 async function aboutClick () {
-  await sleep(1);
+  await sleep(.1);
   if(isTouchSupported){
     document.getElementById("about").setAttribute("href", "events.html"); 
   }
@@ -96,6 +96,10 @@ var mySwiper = new Swiper(sliderSelector, options);
 // Initialize slider
 mySwiper.init();
     
+
+
+
+
 
 
 
