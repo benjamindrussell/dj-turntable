@@ -428,9 +428,10 @@ video[poster]{
   }
   
   .swiper-slide .content .title {
-  font-size: 2.6em;
+  font-size: 2em;
   font-weight: bold;
   margin-bottom: 30px;
+  
   }
   
   .swiper-slide .content .caption {
