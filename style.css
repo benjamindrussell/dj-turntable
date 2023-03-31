@@ -41,8 +41,28 @@ figure{
 }
 section{
   grid-area: section;
+  
+}
+.sectionG {
   color:#95e712;
   padding:0 5%;
+}
+.sectionE {
+  color:#fff;
+  justify-items: center;
+  align-items: center;
+  padding:10px 2.5%;
+  margin:10px 2.5%;
+  background: #3131abe9;
+  border-radius:4px;
+}
+.sectionE h3{
+  color: #95e712;
+  font-size: 2em;
+  
+}
+.sectionE p {
+  font-size: 1.25em;
 }
 video {
 width:426px;
@@ -65,6 +85,10 @@ video[poster]{
  .headerG {
   padding:1% 5%
  }
+ .headerE{
+  text-align: center;
+  padding:20px 5%;
+ }
 
  header h1{
     color: white;
@@ -85,6 +109,15 @@ video[poster]{
     margin-bottom:1%;
     color:#ffffff;
     padding:1%;
+ }
+ .nestedgridE {
+  text-align:center;
+ }
+ .nestedgridE div h2 {
+  color: #95e712;
+ }
+ .nestedgridE div p {
+  font-size: 1.25em;
  }
  footer{
     grid-area:footer;
@@ -322,6 +355,7 @@ video[poster]{
    padding:5px;
    text-align:center;
    background: #3131aba5;
+   border-radius: 4px;
  }
  .intro p{
    font-size:1.25em;
@@ -390,6 +424,7 @@ video[poster]{
   width: 50%;
   padding-left: 5%;
   color: #fff;
+  background:#00000086
   }
   
   .swiper-slide .content .title {
@@ -428,6 +463,27 @@ video[poster]{
    "homevid"
    "hoemsong";
 } */
+.area1 {
+  grid-area: area1;
+}
+.area2 {
+  grid-area: area2;
+}
+.area2 img {
+  max-width: 100%;
+}
+.area3 {
+  grid-area: area3;
+}
+.area4 {
+  grid-area: area4;
+}
+.area5 {
+  grid-area: area5;
+}
+.area6 {
+  grid-area: area6;
+}
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
    grid-area:spacer;
@@ -444,6 +500,19 @@ video[poster]{
    "services"
    "reviews";
 }
+.nestedgridE {
+   
+  display:grid;
+  grid-template-columns: auto;
+  grid-gap:1%;
+  grid-template-areas:
+  "area1"
+  "area2"
+  "area3"
+  "area4"
+  "area5"
+  "area6";
+}
 .container1{
    display:grid;
     grid-template-columns: auto; 
@@ -454,6 +523,17 @@ video[poster]{
     "figure"
     "main"
     "footer";
+}
+.containerE{
+  display:grid;
+   grid-template-columns: auto; 
+   grid-template-areas:
+   "nav"
+   "spacer"
+   "header"
+   "section"
+   "main"
+   "footer";
 }
 .containerG{ /*for gallery*/
   display:grid;
@@ -482,6 +562,19 @@ video[poster]{
       "services"
       "reviews";
    }
+   .nestedgridE {
+   
+    display:grid;
+    grid-template-columns: auto;
+    grid-gap:1%;
+    grid-template-areas:
+    "area1"
+    "area2"
+    "area3"
+    "area4"
+    "area5"
+    "area6";
+  }
    .container1{
       display:grid;
        grid-template-columns: auto; 
@@ -504,6 +597,17 @@ video[poster]{
     "main"
     "footer"
 }
+.containerE{
+  display:grid;
+   grid-template-columns: auto; 
+   grid-template-areas:
+   "nav"
+   "spacer"
+   "header"
+   "section"
+   "main"
+   "footer";
+}
    header h1{
       font-size:3em;
       
@@ -523,6 +627,16 @@ video[poster]{
       "intro intro intro"
       "dj services reviews";
    }
+   .nestedgridE {
+   
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1%;
+    grid-template-areas:
+    "area1 area2"
+    "area3 area4"
+    "area5 area6";
+  }
     .container1{ /*for home page*/
         display:grid;
         grid-template-columns: 1fr 1fr auto;
@@ -544,6 +658,16 @@ video[poster]{
       "main"
       "footer"
   }
+  .containerE{
+    display:grid;
+     grid-template-columns: 1fr 1fr 1fr; 
+     grid-template-areas:
+     "nav nav nav"
+     "spacer spacer spacer"
+     "header section section"
+     "main main main"
+     "footer footer footer";
+  }
     .intro{
       text-align: left;
     }
@@ -558,7 +682,7 @@ video[poster]{
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
 @media only screen and (max-width: 480px) {
-   header, .headerG{
+   header, .headerG, .headerE{
       padding-top:100px;
    }
 }
