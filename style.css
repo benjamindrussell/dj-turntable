@@ -56,7 +56,7 @@ section{
   background: #3131abe9;
   border-radius:4px;
 }
-.sectionE h3{
+.sectionE h2{
   color: #95e712;
   font-size: 2em;
   
@@ -119,12 +119,12 @@ video[poster]{
  .nestedgridE div p {
   font-size: 1.25em;
  }
- footer{
+ footer , .footerE{
     grid-area:footer;
     color:white;
     background-color:#3131aba5;
     text-align:center;
-    margin-top:3%;
+    margin-top:4%;
   }
 
 
@@ -464,15 +464,25 @@ video[poster]{
    "homevid"
    "hoemsong";
 } */
+.green{
+  color: #95e712;
+}
 .area1 {
   grid-area: area1;
-  
+  padding:0% 5% 5% 5%
+}
+.area1 div{
+  margin-top:4%;
+  background: #3131abe9;
+}
+.area1 h2{
+  color:#95e712;
 }
 .area2 {
   grid-area: area2;
 }
 .area2 .img-container{
-  padding:0 10% 10% 10%;
+  padding:0 6% 6% 6%;
 }
 .area2 .img-container div {
   background-image: url("DJPic1.jpg");
@@ -488,7 +498,7 @@ video[poster]{
   position: relative;
 }
 .area3 .img-container{
-  padding:0 10% 10% 10%;
+  padding:0 6% 6% 6%;
 }
 .area3 .img-container div {
   background-image: url("gallery2.jpg");
@@ -503,7 +513,7 @@ video[poster]{
   grid-area: area4;
 }
 .area4 .img-container{
-  padding:0 10% 10% 10%;
+  padding:0 6% 6% 6%;
 }
 .area4 .img-container div {
   background-image: url("gallery4.jpg");
@@ -518,7 +528,7 @@ video[poster]{
   grid-area: area5;
 }
 .area5 .img-container{
-  padding:0 10% 10% 10%;
+  padding:0 6% 6% 6%;
 }
 .area5 .img-container div {
   background-image: url("gallery3.jpg");
@@ -533,7 +543,7 @@ video[poster]{
   grid-area: area6;
 }
 .area6 .img-container{
-  padding:0 10% 10% 10%;
+  padding:0 6% 6% 6%;
 }
 .area6 .img-container div {
   background-image: url("gallery6.jpg");
@@ -566,11 +576,26 @@ video[poster]{
   transition: opacity .2s, visibility .2s;
 }
 
-.area2:hover .img__description_layer {
+.img__wrap .highlight:hover .img__description_layer {
   visibility: visible;
   opacity: 1;
+}
+.area2 .highlight:hover .img__description_layer{
   background-image: linear-gradient(to left bottom, rgba(36, 62, 206, 0.6), rgba(87, 206, 36, 0.6)), url("DJPic1.jpg");
 }
+.area3 .highlight:hover .img__description_layer{
+  background-image: linear-gradient(to left bottom, rgba(36, 62, 206, 0.6), rgba(87, 206, 36, 0.6)), url("gallery2.jpg");
+}
+.area4 .highlight:hover .img__description_layer{
+  background-image: linear-gradient(to left bottom, rgba(36, 62, 206, 0.6), rgba(87, 206, 36, 0.6)), url("gallery4.jpg");
+}
+.area5 .highlight:hover .img__description_layer{
+  background-image: linear-gradient(to left bottom, rgba(36, 62, 206, 0.6), rgba(87, 206, 36, 0.6)), url("gallery3.jpg");
+}
+.area6 .highlight:hover .img__description_layer{
+  background-image: linear-gradient(to left bottom, rgba(36, 62, 206, 0.6), rgba(87, 206, 36, 0.6)), url("gallery6.jpg");
+}
+
 
 .img__description {
   transition: .2s;
@@ -788,6 +813,37 @@ video[poster]{
    .swiper-slide .content .title {
     font-size: 1.9em;
   }
+  .area2 .img-container{
+    padding:0 4% 4% 4%;
+  }
+  .area2 .img-container div {
+    height:250px;
+  }
+  .area3 .img-container{
+    padding:0 4% 4% 4%;
+  }
+  .area3 .img-container div {
+    height:250px;
+  }
+  .area4 .img-container{
+    padding:0 4% 4% 4%;
+  }
+  .area4 .img-container div {
+    height:250px;
+  }
+  .area5 .img-container{
+    padding:0 4% 4% 4%;
+  }
+  .area5 .img-container div {
+    height:250px;
+  }
+  .area6 .img-container{
+    padding:0 4% 4% 4%;
+  }
+  .area6 .img-container div {
+    height:250px;
+  }
+  
 }
 @media only screen and (max-width:960px){
     nav{
@@ -839,7 +895,9 @@ video[poster]{
     .navbar.on a {
       min-width:100%;
     }
-    
+    .footerE{
+      margin-top:20%;
+    }
     
 } 
 @media only screen and(max-width:1050px) and(min-width:960px){
