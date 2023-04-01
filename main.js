@@ -100,8 +100,3 @@ mySwiper.init();
 
 
 
-
-
-
-
-

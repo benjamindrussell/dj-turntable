@@ -15,6 +15,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("dj-grayscale2.png");
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
  }
  .container1{
    display:grid;
@@ -110,7 +111,7 @@ video[poster]{
     color:#ffffff;
     padding:1%;
  }
- .nestedgridE {
+ .nestedgridE h2{
   text-align:center;
  }
  .nestedgridE div h2 {
@@ -466,6 +467,7 @@ video[poster]{
 } */
 .green{
   color: #95e712;
+  text-decoration: underline;
 }
 .area1 {
   grid-area: area1;
@@ -474,6 +476,8 @@ video[poster]{
 .area1 div{
   margin-top:4%;
   background: #3131abe9;
+  padding:2%;
+  border-radius: 4px;
 }
 .area1 h2{
   color:#95e712;
@@ -605,14 +609,54 @@ video[poster]{
 .area2:hover .img__description {
   transform: translateY(0);
 }
-
-
+.container2 header {
+  padding:5% 20%;
+  text-align: center;
+}
+.container2 figure {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.container2 figure figcaption {
+  font-size: 2em;
+  color:#95e712;
+}
+.container2 figure img{
+  max-width:100%;
+  display: block;
+  margin: 0 auto;
+}
+.container2 main {
+  padding:5% 5% 0% 5%;
+  
+}
+.container2 main div{
+  padding:3%;
+  background: #3131abe9;
+  border-radius: 4px;
+}
+.container2 main div p {
+  font-size: 1.5em;
+  
+}
+.container2 section {
+  color:#fff;
+  background: #3131abe9;
+  border-radius: 4px;
+  margin:1%;
+  padding:1%;
+}
+.container2 p{
+  font-size: 1.25em;
+}
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
    grid-area:spacer;
    height:0;
 }
-.nestedgrid1 {
+.nestedgrid1 { /* for home*/
    
    display:grid;
    grid-template-columns: auto;
@@ -623,7 +667,7 @@ video[poster]{
    "services"
    "reviews";
 }
-.nestedgridE {
+.nestedgridE { /* for events */
    
   display:grid;
   grid-template-columns: auto;
@@ -636,7 +680,7 @@ video[poster]{
   "area5"
   "area6";
 }
-.container1{
+.container1{ /*for home*/
    display:grid;
     grid-template-columns: auto; 
     grid-template-areas:
@@ -647,7 +691,19 @@ video[poster]{
     "main"
     "footer";
 }
-.containerE{
+.container2{ /*for weddings, celebrations, corporate, and occasions*/
+  display:grid;
+   grid-template-columns: auto; 
+   grid-template-areas:
+   "nav"
+   "spacer"
+   "header"
+   "main"
+   "figure"
+   "section"
+   "footer";
+}
+.containerE{ /* for events */
   display:grid;
    grid-template-columns: auto; 
    grid-template-areas:
@@ -674,7 +730,7 @@ video[poster]{
    .spacer-area{
       height:75px;
    }
-   .nestedgrid1 {
+   .nestedgrid1 { /*for home*/
    
       display:grid;
       grid-template-columns: auto;
@@ -685,7 +741,7 @@ video[poster]{
       "services"
       "reviews";
    }
-   .nestedgridE {
+   .nestedgridE { /* for events */
    
     display:grid;
     grid-template-columns: auto;
@@ -698,7 +754,7 @@ video[poster]{
     "area5"
     "area6";
   }
-   .container1{
+   .container1{ /*for home*/
       display:grid;
        grid-template-columns: auto; 
        grid-template-areas:
@@ -709,6 +765,19 @@ video[poster]{
        "main"
        "footer";
    }
+   .container2{ /*for weddings, celebrations, corporate, and occasions*/
+    display:grid;
+     grid-template-columns: auto; 
+     grid-template-areas:
+     "nav"
+     "spacer"
+     "header"
+     "main"
+     "figure"
+     "section"
+     
+     "footer";
+ }
    .containerG{ /*for gallery*/
     display:grid;
     grid-template-columns: auto;
@@ -720,7 +789,7 @@ video[poster]{
     "main"
     "footer"
 }
-.containerE{
+.containerE{ /*for events*/
   display:grid;
    grid-template-columns: auto; 
    grid-template-areas:
@@ -744,14 +813,14 @@ video[poster]{
    .spacer-area{
       height:55px;
    }
-   .nestedgrid1{
+   .nestedgrid1{ /*for home*/
       display:grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas:
       "intro intro intro"
       "dj services reviews";
    }
-   .nestedgridE {
+   .nestedgridE { /* for events */
    
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -771,6 +840,17 @@ video[poster]{
         "main main main"
         "footer footer footer";
     }
+    .container2{ /*for home page*/
+      display:grid;
+      grid-template-columns: 1fr 1fr auto;
+      grid-template-areas:
+      "nav nav nav"
+      "spacer spacer spacer"
+      "header figure figure"
+      "main figure figure"
+      "section section section"
+      "footer footer footer";
+  }
     .containerG{ /*for gallery*/
       display:grid;
       grid-template-columns: auto;
@@ -782,7 +862,7 @@ video[poster]{
       "main"
       "footer"
   }
-  .containerE{
+  .containerE{ /*for events*/
     display:grid;
      grid-template-columns: 1fr 1fr 1fr; 
      grid-template-areas:
