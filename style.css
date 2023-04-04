@@ -114,6 +114,9 @@ video[poster]{
  .nestedgridE h2{
   text-align:center;
  }
+ .area2 p {
+  text-align: center;
+ }
  .nestedgridE div h2 {
   color: #95e712;
  }
@@ -651,6 +654,15 @@ video[poster]{
 .container2 p{
   font-size: 1.25em;
 }
+.containerA main {
+  font-size: 1.25em;
+  
+}
+.containerA main div {
+  padding:3%;
+  background: #3131abe9;
+  border-radius: 4px;
+}
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
    grid-area:spacer;
@@ -724,6 +736,16 @@ video[poster]{
   "section"
   "main"
   "footer"
+}
+.containerA{ /*for events*/
+  display:grid;
+   grid-template-columns: auto; 
+   grid-template-areas:
+   "nav"
+   "spacer"
+   "header"
+   "main"
+   "footer";
 }
 /*---------------------------Tablet Layout----------------------------*/
 @media only screen and (min-width: 480px) {
@@ -800,6 +822,17 @@ video[poster]{
    "main"
    "footer";
 }
+.containerA{ /*for events*/
+    display:grid;
+     grid-template-columns: auto; 
+     grid-template-areas:
+     "nav"
+     "spacer"
+     "header"
+     "main"
+     "footer";
+  }
+
    header h1{
       font-size:3em;
       
@@ -872,6 +905,15 @@ video[poster]{
      "main main main"
      "footer footer footer";
   }
+  .containerA{ /*for events*/
+    display:grid;
+     grid-template-columns: 1fr 2fr; 
+     grid-template-areas:
+     "nav nav"
+     "spacer spacer"
+     "header main"
+     "footer footer";
+  }
     .intro{
       text-align: left;
     }
@@ -887,7 +929,7 @@ video[poster]{
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
 @media only screen and (max-width: 480px) {
-   header, .headerG, .headerE{
+   header, .headerG, .headerE, .header2{
       padding-top:100px;
    }
    .swiper-slide .content .title {
