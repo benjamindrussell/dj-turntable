@@ -90,6 +90,10 @@ video[poster]{
   text-align: center;
   padding:20px 5%;
  }
+ .headerA {
+  text-align: center;
+ }
+
 
  header h1{
     color: white;
@@ -654,11 +658,17 @@ video[poster]{
 .container2 p{
   font-size: 1.25em;
 }
+.containerA figure img {
+  max-width: 80%;
+  align-self: center;
+}
 .containerA main {
-  font-size: 1.25em;
-  
+  font-size: 1.3em;
+  padding:0 3%;
+  margin-top:5%;
 }
 .containerA main div {
+  margin:3% 0;
   padding:3%;
   background: #3131abe9;
   border-radius: 4px;
@@ -667,6 +677,14 @@ video[poster]{
 .spacer-area{
    grid-area:spacer;
    height:0;
+}
+.nestedgridA {
+  grid-area: nestedA;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "header"
+  "figure";
 }
 .nestedgrid1 { /* for home*/
    
@@ -743,8 +761,9 @@ video[poster]{
    grid-template-areas:
    "nav"
    "spacer"
-   "header"
+   "nestedA"
    "main"
+   "section"
    "footer";
 }
 /*---------------------------Tablet Layout----------------------------*/
@@ -828,8 +847,9 @@ video[poster]{
      grid-template-areas:
      "nav"
      "spacer"
-     "header"
+     "nestedA"
      "main"
+     "section"
      "footer";
   }
 
@@ -907,11 +927,12 @@ video[poster]{
   }
   .containerA{ /*for events*/
     display:grid;
-     grid-template-columns: 1fr 2fr; 
+     grid-template-columns: 1fr 1fr; 
      grid-template-areas:
      "nav nav"
      "spacer spacer"
-     "header main"
+     "nestedA main"
+     "nestedA section"
      "footer footer";
   }
     .intro{
