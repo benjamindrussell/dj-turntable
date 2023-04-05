@@ -57,6 +57,7 @@ section{
   background: #3131abe9;
   border-radius:4px;
 }
+
 .sectionE h2{
   color: #95e712;
   font-size: 2em;
@@ -668,7 +669,22 @@ video[poster]{
   margin-top:5%;
 }
 .containerA main div {
-  margin:3% 0;
+  margin-top:3%;
+  padding:3%;
+  background: #3131abe9;
+  border-radius: 4px;
+}
+.containerA main article{
+  margin-top:3%;
+  padding:3%;
+  background: #3131abe9;
+  border-radius: 4px;
+}
+.containerA section {
+  padding:0 3%;
+  color:#fff;
+}
+.containerA section div {
   padding:3%;
   background: #3131abe9;
   border-radius: 4px;
