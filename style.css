@@ -44,6 +44,9 @@ section{
   grid-area: section;
   
 }
+aside {
+  grid-area:aside;
+}
 .sectionG {
   color:#95e712;
   padding:0 5%;
@@ -83,6 +86,7 @@ video[poster]{
  header{
     grid-area:header;
     padding:5%;
+    text-align: center;
  }
  .headerG {
   padding:1% 5%
@@ -689,6 +693,84 @@ video[poster]{
   background: #3131abe9;
   border-radius: 4px;
 }
+.containerP aside{
+  padding:3%;
+}
+.containerP aside div{
+  padding:2%;
+  background: #3131abe9;
+  border-radius: 4px;
+  color:#fff;
+  font-size: 1.25em;
+}
+.containerP main figure{
+  border:1px solid #3231ab;
+  border-radius: 4px;
+  height:25vw;
+  position:relative;
+  background-image: radial-gradient(rgb(20, 20, 20, .8), rgb(0, 0, 0, .7));
+}
+.containerP main figure .info{
+  color:black;
+  min-width: 100%;
+  height:5vw;
+  background: rgba(150, 232, 17, .9);
+  position:absolute;
+  bottom:0;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius: 4px;
+  transition: .5s;
+  display:flex;
+
+}
+.containerP main figure .info:hover {
+  height:25vw;
+  border-radius: 4px;
+}
+.containerP main figure div h2{
+  margin:5px;
+}
+.silver {
+  grid-area: silverPack;
+  padding:0;
+}
+.silver img{
+  width:19vw;
+}
+.gold {
+  grid-area: goldPack;
+  padding:0;
+}
+.gold img{
+  width:19vw;
+}
+.platinum {
+  grid-area: platinumPack;
+  padding:0;
+}
+.platinum img{
+  width:19vw;
+}
+.package-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .35s ;
+  /* border: 3px solid #fff; */
+}
+.package-btn__line {
+  display: flex;
+  width: 40px;
+  height: 6px;
+  background: black;
+  border-radius: 5px;
+  
+  transition: all .35s ;
+}
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
    grid-area:spacer;
@@ -725,6 +807,15 @@ video[poster]{
   "area4"
   "area5"
   "area6";
+}
+.nestedgridP {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap:1%;
+  grid-template-areas: 
+  "silverPack"
+  "goldPack"
+  "platinumPack";
 }
 .container1{ /*for home*/
    display:grid;
@@ -782,6 +873,17 @@ video[poster]{
    "section"
    "footer";
 }
+.containerP {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: 
+  "nav"
+  "spacer"
+  "header"
+  "aside"
+  "main"
+  "footer";
+}
 /*---------------------------Tablet Layout----------------------------*/
 @media only screen and (min-width: 480px) {
    .spacer-area{
@@ -810,6 +912,14 @@ video[poster]{
     "area4"
     "area5"
     "area6";
+  }
+  .nestedgridP {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "silverPack"
+    "goldPack"
+    "platinumPack";
   }
    .container1{ /*for home*/
       display:grid;
@@ -868,6 +978,17 @@ video[poster]{
      "section"
      "footer";
   }
+  .containerP {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "nav"
+    "spacer"
+    "header"
+    "aside"
+    "main"
+    "footer";
+  }
 
    header h1{
       font-size:3em;
@@ -898,6 +1019,12 @@ video[poster]{
     "area1 area2"
     "area3 area4"
     "area5 area6";
+  }
+  .nestedgridP {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "silverPack goldPack platinumPack";
   }
     .container1{ /*for home page*/
         display:grid;
@@ -950,6 +1077,16 @@ video[poster]{
      "nestedA main"
      "nestedA section"
      "footer footer";
+  }
+  .containerP {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "nav nav"
+    "spacer spacer"
+    "header aside"
+    "main main"
+    "footer footer";
   }
     .intro{
       text-align: left;
@@ -1057,7 +1194,25 @@ video[poster]{
     .footerE{
       margin-top:20%;
     }
-    
+    .containerP main figure{
+      height:50vw;
+    }
+    .silver img{
+      width:38vw;
+    }
+    .gold img{
+      width:38vw;
+    }
+    .platinum img{
+      width:38vw;
+    }
+    .containerP main figure div{
+      height:10vw;
+    }
+    .containerP main figure div:hover {
+      height:50vw;
+      border-radius: 4px;
+    }
 } 
 @media only screen and(max-width:1050px) and(min-width:960px){
    nav {
