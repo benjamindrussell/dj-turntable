@@ -317,7 +317,6 @@ video[poster]{
    height: 6px;
    background: #fff;
    border-radius: 5px;
-   
    transition: all .35s ;
  }
  .menu-btn__burger::before {
@@ -723,10 +722,10 @@ video[poster]{
   display:flex;
 
 }
-.containerP main figure .info:hover {
+/* .containerP main figure .info:hover {
   height:25vw;
   border-radius: 4px;
-}
+} */
 .containerP main figure div h2{
   margin:5px;
 }
@@ -764,13 +763,34 @@ video[poster]{
 }
 .package-btn__line {
   display: flex;
-  width: 40px;
+  width: 30px;
   height: 6px;
   background: black;
   border-radius: 5px;
-  
   transition: all .35s ;
+  transform: rotate(-45deg)
 }
+.package-btn__line::after {
+  display:flex;
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background: black;
+  border-radius: 5px;
+  transition: all .35s ;
+  transform: translateX(13px) translateY(13px) rotate(90deg);
+}
+
+.package-btn.open .package-btn__line {
+  transform: translateX(-40px);
+  background: transparent;
+  box-shadow: none;
+}
+.package-btn.open .package-btn__line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
    grid-area:spacer;
