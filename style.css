@@ -20,6 +20,7 @@
  .container1{
    display:grid;
  }
+ 
  nav{
     text-transform: capitalize;
     position:fixed;
@@ -718,16 +719,33 @@ video[poster]{
   bottom:0;
   border-bottom-left-radius:4px;
   border-bottom-right-radius: 4px;
-  transition: .5s;
+  transition: .5s ease-in-out;
   display:flex;
+  align-items: center;
+  padding: 5px 0 5px 0;
 
+}
+.containerP main figure .info.open{
+  height: 25vw;
+  border-radius: 4px;
+  /* align-items: revert; */
+}
+.containerP main figure .info.open h2 {
+  margin-top: 10px;
+  transition: .5s ease-in-out;
+}
+
+.containerP main figure .info.open button #arrow{
+  transition: .5s ease-in-out;
+  transform: rotate(180deg);
 }
 /* .containerP main figure .info:hover {
   height:25vw;
   border-radius: 4px;
 } */
-.containerP main figure div h2{
+.containerP main figure .info h2{
   margin:5px;
+  transition: .5s ease-in-out;
 }
 .silver {
   grid-area: silverPack;
@@ -736,12 +754,42 @@ video[poster]{
 .silver img{
   width:19vw;
 }
+#silverButton {
+  height:3.5em;
+  width:7.5em;
+  top:50%;
+  margin-left:auto;
+  margin-right:2%;
+  border:2px solid black;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  color:black;
+  font-size:1rem;
+}
+
+#silverButton:hover{
+  background: linear-gradient(to left bottom, rgb(30, 50, 166), rgb(58, 137, 24));
+}
 .gold {
   grid-area: goldPack;
   padding:0;
 }
 .gold img{
   width:19vw;
+}
+#goldButton {
+  height:3.5em;
+  width:7.5em;
+  top:50%;
+  margin-left:auto;
+  margin-right:2%;
+  border:2px solid black;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  color:black;
+  font-size:1rem;
 }
 .platinum {
   grid-area: platinumPack;
@@ -750,7 +798,28 @@ video[poster]{
 .platinum img{
   width:19vw;
 }
-.package-btn {
+#platButton {
+  height:3.5em;
+  width:7.5em;
+  top:50%;
+  margin-left:auto;
+  margin-right:2%;
+  border:2px solid black;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  color:black;
+  font-size:1rem;
+}
+
+#arrow{
+  width:1em;
+  transition: .5s ease-in-out;
+}
+#arrow {
+  transform:translateY(5%);
+}
+/* .package-btn {
   position: relative;
   display: flex;
   justify-content: center;
@@ -759,7 +828,7 @@ video[poster]{
   height: 40px;
   cursor: pointer;
   transition: all .35s ;
-  /* border: 3px solid #fff; */
+  /* border: 3px solid #fff; 
 }
 .package-btn__line {
   display: flex;
@@ -789,7 +858,7 @@ video[poster]{
 }
 .package-btn.open .package-btn__line::after {
   transform: rotate(-45deg) translate(35px, 35px);
-}
+}*/
 
 /*---------------------------Mobile Layout----------------------------*/
 .spacer-area{
@@ -1159,6 +1228,15 @@ video[poster]{
   .area6 .img-container div {
     height:250px;
   }
+  #silverButton {
+    height:3em;
+  }
+  #goldButton {
+    height:3em;
+  }
+  #platButton {
+    height:3em;
+  }
   
 }
 @media only screen and (max-width:960px){
@@ -1187,8 +1265,7 @@ video[poster]{
         width:100%;
     }
     nav .navbar ul li ul li{
-        background:#4562a7
-;
+        background:#4562a7;
     }
     /* #menu-bar:checked ~ .navbar{
         display: initial;
@@ -1226,10 +1303,10 @@ video[poster]{
     .platinum img{
       width:38vw;
     }
-    .containerP main figure div{
+    .containerP main figure .info{
       height:10vw;
     }
-    .containerP main figure div:hover {
+    .containerP main figure .info:hover {
       height:50vw;
       border-radius: 4px;
     }
@@ -1256,3 +1333,6 @@ video[poster]{
         z-index:1000;
     }
 }
+
+
+
