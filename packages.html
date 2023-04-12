@@ -7,7 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/a4ccb10fb0.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="icon" href="DJ_Turntable_LOGO_2.png"
+        <link rel="icon" href="DJ_Turntable_LOGO_2.png">
     </head>
     <body>
         
@@ -65,27 +65,66 @@
             </aside>
             <main class="nestedgridP">
                 <figure class="silver">
-                    <img src="silverRecord2.png">
+                    <img src="silverRecord2.png" alt="Picture of a silver record">
+                    <div class="list-wrapper" id="silverWrapper">
+                        <ul>
+                            <li>Up to 2 event-planning consultations</li>
+                            <li>Professional DJ/MC</li>
+                            <li>Complete song database</li>
+                            <li>Up to 4 hours of music</li>
+                            <li>Set up and break down of all equipment</li>
+                            <li>State-of-the-art sound system (single location)</li>
+                        </ul>
+                    </div>
                     <div class="info" id="silverInfo">
                         <h2>Silver Package</h2>
-                        <button type="button" id="silverButton">Read More <img id="arrow" src="upArrow.png"></button>
+                        <button type="button" id="silverButton" onclick="silverDescript()">Read More <img id="arrow1" class="arrow" src="upArrow.png" alt="Arrow icon"></button>
                     </div>
                     
                 </figure>
                 <figure class="gold">
-                    <img src="goldRecord2.png">
+                    <img src="goldRecord2.png" alt="picture of a gold record">
+                    <div class="list-wrapper" id="goldWrapper">
+                        <ul>
+                            <li>Up to 3 event-planning consultations</li>
+                            <li>Professional DJ/MC</li>
+                            <li>Complete song database</li>
+                            <li>Up to 6 hours of music</li>
+                            <li>Set up and break down of all equipment</li>
+                            <li>State-of-the-art sound system (single location)</li>
+                            <li>Basic Dance Floor Lighting</li>
+                        </ul>
+                    </div>
                     <div class="info" id="goldInfo">
-                        <h2>Gold Package</h2>
-                        <button type="button" id="goldButton" onclick="goldDescript()">Read More <img id="arrow" src="upArrow.png"></button>
+                            <h2>Gold Package</h2>
+                            <button type="button" id="goldButton" onclick="goldDescript()">Read More <img class="arrow" id="arrow2" src="upArrow.png" alt="arrow icon"></button>
+                            
+                            
+                            
+                       
+                        <!-- <div class="package-description"><p>asjdhbfjashbasdasjbhv</p>
+                        </div> -->
                     </div>
 
                     
                 </figure>
                 <figure class="platinum">
-                    <img src="platinumRecord2.png">
-                    <div class="info">
+                    <img src="platinumRecord2.png" alt="picture of a platinum record">
+                    <div class="list-wrapper" id="platinumWrapper">
+                        <ul>
+                            <li>Up to 3 event-planning consultations</li>
+                            <li>Professional DJ/MC</li>
+                            <li>Complete song database</li>
+                            <li>Up to 8 hours of music</li>
+                            <li>Set up and break down of all equipment</li>
+                            <li>State-of-the-art sound system (two locations)</li>
+                            <li>Basic Dance Floor Lighting</li>
+                            <li>Room Enhancement Lighting</li>
+                        </ul>
+                    </div>
+                    <div class="info" id="platInfo">
                         <h2>Platinum Package</h2>
-                        <button type="button" id="platButton">Read More <img id="arrow" src="upArrow.png"></button>
+                        <button type="button" id="platButton" onclick="platDescript()">Read More <img class="arrow" id="arrow3" src="upArrow.png" alt="arrow icon"></button>
                         <!-- <div class="package-btn" id="platButton" onclick="packageArrow()">
                             <div class="package-btn__line"></div>
                         </div> -->
