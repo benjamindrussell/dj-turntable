@@ -43,6 +43,77 @@ menuBtn.addEventListener('click', () => {
   }
 });
 
+/* //shows menu button in moblie and handles animation
+let packageBtn = document.getElementById("platButton");
+let packageOpen = false;  
+function packageArrow(){
+  if(!packageOpen) {
+    packageBtn.classList.add('open');
+    packageOpen = true;
+  } else {
+    packageBtn.classList.remove('open');
+    packageOpen = false;
+  }
+} */
+
+let isGoldActive = false;
+async function goldDescript(){
+  if(!isGoldActive) {
+    document.getElementById("goldInfo").style.alignItems = "revert";
+    document.getElementById("goldInfo").classList.add('open');
+    document.getElementById("goldWrapper").classList.add('open');
+    /* document.getElementById("goldInfo").style.height = "25vw"; */
+    await sleep(.5);
+    /* document.getElementById("goldWrapper").style.visibility = "visible"; */
+    isGoldActive= true;
+  } else {
+    /* document.getElementById("goldInfo").style.height = "5vw"; */
+    document.getElementById("goldInfo").classList.remove('open');
+    document.getElementById("goldWrapper").classList.remove('open');
+    /* document.getElementById("goldWrapper").style.visibility = "hidden"; */
+    await sleep (.5);
+    document.getElementById("goldInfo").style.alignItems = "center";
+    isGoldActive= false;
+  }
+}
+
+let isSilverActive = false;
+async function silverDescript(){
+  if(!isSilverActive) {
+    document.getElementById("silverInfo").style.alignItems = "revert";
+    document.getElementById("silverInfo").classList.add('open');
+    document.getElementById("silverWrapper").classList.add('open');
+    /* document.getElementById("silverInfo").style.height = "25vw"; */
+    isSilverActive= true;
+  } else {
+    /* document.getElementById("silverInfo").style.height = "5vw"; */
+    document.getElementById("silverInfo").classList.remove('open');
+    document.getElementById("silverWrapper").classList.remove('open');
+    await sleep (.5);
+    document.getElementById("silverInfo").style.alignItems = "center";
+    isSilverActive= false;
+  }
+}
+
+let isPlatActive = false;
+async function platDescript(){
+  if(!isPlatActive) {
+    document.getElementById("platInfo").style.alignItems = "revert";
+    document.getElementById("platInfo").classList.add('open');
+    document.getElementById("platinumWrapper").classList.add('open');
+    /* document.getElementById("platInfo").style.height = "25vw"; */
+    isPlatActive= true;
+  } else {
+    /* document.getElementById("platInfo").style.height = "5vw"; */
+    document.getElementById("platInfo").classList.remove('open');
+    document.getElementById("platinumWrapper").classList.remove('open');
+    await sleep (.5);
+    document.getElementById("platInfo").style.alignItems = "center";
+    isPlatActive= false;
+  }
+}
+
+
 // Toggles navbar in mobile view
 $(document).ready(function() {
     $('.menu-btn').click(function() {
