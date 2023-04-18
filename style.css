@@ -45,6 +45,10 @@ section{
   grid-area: section;
   
 }
+form {
+  grid-area: form;
+  /* position: relative; */
+}
 aside {
   grid-area:aside;
 }
@@ -887,6 +891,39 @@ video[poster]{
 #arrow3 {
   transform:translateY(5%);
 }
+.leftul {
+  grid-area: leftul;
+  margin-left:10%;
+}
+.rightul {
+  grid-area: rightul;
+  
+}
+.formhead {
+  grid-area: formhead;
+}
+.nestedgridC {
+  background: #3131abe9;
+  margin:10px;
+  border-radius: 4px;
+}
+.nestedgridC h3{
+  color:#95e712;
+  text-align: center;
+}
+.nestedgridC ul {
+  list-style-type: none;
+  font-size: 1.25em;
+}
+form .div1{
+  margin-left:0%;
+  color:white;
+  width:75%
+}
+form input {
+  width:100%;
+}
+
  /* .package-title{
   display:flex;
   align-items: center;
@@ -988,6 +1025,13 @@ video[poster]{
   "goldPack"
   "platinumPack";
 }
+.nestedgridC {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+  "formhead formhead"
+  "leftul rightul";
+}
 .container1{ /*for home*/
    display:grid;
     grid-template-columns: auto; 
@@ -1055,6 +1099,25 @@ video[poster]{
   "main"
   "footer";
 }
+.containerC {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: 
+  "nav"
+  "spacer"
+  "header"
+  "main"
+  "form"
+  "footer";
+}
+form {
+  position: initial;
+  margin-left:15%;
+}
+form .div1{
+  position: initial;
+}
+
 /*---------------------------Tablet Layout----------------------------*/
 @media only screen and (min-width: 480px) {
    .spacer-area{
@@ -1091,6 +1154,13 @@ video[poster]{
     "silverPack"
     "goldPack"
     "platinumPack";
+  }
+  .nestedgridC {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "formhead formhead"
+    "leftul rightul";
   }
    .container1{ /*for home*/
       display:grid;
@@ -1160,12 +1230,29 @@ video[poster]{
     "main"
     "footer";
   }
+  .containerC {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "nav"
+    "spacer"
+    "header"
+    "main"
+    "form"
+    "footer";
+  }
 
    header h1{
       font-size:3em;
       
     }
-    
+  /* form {
+    position: initial;
+    margin-left: 25%;
+  }
+  form .div1{
+    position: initial;
+  } */
 }
 
 
@@ -1196,6 +1283,13 @@ video[poster]{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "silverPack goldPack platinumPack";
+  }
+  .nestedgridC {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "formhead formhead"
+    "leftul rightul";
   }
     .container1{ /*for home page*/
         display:grid;
@@ -1259,6 +1353,16 @@ video[poster]{
     "main main"
     "footer footer";
   }
+  .containerC {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "nav nav"
+    "spacer spacer "
+    "header header "
+    "main form"
+    "footer footer";
+  }
     .intro{
       text-align: left;
     }
@@ -1269,8 +1373,15 @@ video[poster]{
     .swiper-container {
       height: 28vw;
   }
- 
-    
+  
+  /* form {
+    position: relative;
+    margin-left: 0;
+  }
+  form .div1{
+    position: absolute;
+  } */
+  
 }
 /*---------------------------Mobile and Tablet Layout----------------------------*/
 @media only screen and (max-width: 480px) {
