@@ -1620,11 +1620,18 @@ form .div1{
     .logo{
         display:none;
         z-index:0;
+
+    }
+    .logo-link{
+      display:none;
     }
     .small-logo{
         display: initial;
         position:absolute;
         z-index:1000;
+    }
+    .small-link{
+      display:initial;
     }
 }
 
