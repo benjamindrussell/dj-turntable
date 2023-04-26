@@ -93,6 +93,24 @@ video[poster]{
     padding:5%;
     text-align: center;
  }
+ header h1 {
+  transform: translateX(.2em);
+  animation:words 1.5s;
+ }
+ @keyframes words {
+  0% {
+     opacity: 0;
+     transform: translateY(.75em);
+  }
+   50% {
+     opacity: 1;
+     transform: translateX(.2em);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(.2em);
+  }
+}
  .headerG {
   padding:1% 5%
  }
@@ -371,7 +389,7 @@ video[poster]{
    grid-area: intro;
    padding:5px;
    text-align:center;
-   background: #3131aba5;
+   background: #3131abe9;
    border-radius: 4px;
  }
  .intro p{
@@ -379,20 +397,30 @@ video[poster]{
  }
  .DJ{
    grid-area:dj;
+   background: #3131abe9;
+   border-radius: 4px;
+   margin-top: 4px;
+   padding:4px;
  }
  .services{
    grid-area:services;
+   background: #3131abe9;
+   border-radius: 4px;
+   margin-top: 4px;
+   padding:4px;
  }
  .reviews{
    grid-area:reviews;
-   
+   background: #3131abe9;
+   border-radius: 4px;
+   margin-top: 4px;
+   padding:4px;
  }
  .plus {
    color:lime;
  }
- .nestedgrid1 div h3{
-   color:#95e712;
- }
+ 
+ 
  #homevid {
    grid-area: homevid;
  }
@@ -728,7 +756,7 @@ video[poster]{
   z-index: -1;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .5s visibility .5s;
+  transition: opacity .5s;
 }
 .containerP main figure .list-wrapper.open{
   z-index: 998;
@@ -947,26 +975,28 @@ form input {
 .containerRES footer {
   margin-top:8%;
 }
-.containerREV main {
-  margin-top:30vw;
-}
 .review {
   background: #3131abe9;
   margin: 1% 0 1% 0;
   padding:1%;
   border-radius: 4px;
-  opacity: 0;
-  transition: opacity 250ms ease-in;
+  opacity: 1;
+  /* transition: opacity 250ms ease-in; */
+}
+.review span {
+  color:#95e712;
 }
 
-.review.appear{
+/* .review.appear{
   opacity: 1;
   z-index:999;
   
-}
+} */
 .review p {
   font-size: 1.15em;
 }
+
+
  /* .package-title{
   display:flex;
   align-items: center;
@@ -1571,7 +1601,7 @@ form .div1{
       border-radius: 4px;
     }
 } 
-@media only screen and(max-width:1050px) and(min-width:960px){
+@media only screen and (max-width:1050px) and (min-width:960px){
    nav {
       padding:10px;
     }

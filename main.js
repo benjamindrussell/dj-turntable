@@ -113,35 +113,6 @@ async function platDescript(){
   }
 }
 
-const faders = document.querySelectorAll(".review");
-
-const appearOptions = {
-  threshold: 0,
-  rootMargin: "0px 0px -250px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  appearOnScroll
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      console.log('test');
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-      
-    }
-  });
-},
-appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-
-
 // Toggles navbar in mobile view
 $(document).ready(function() {
     $('.menu-btn').click(function() {
