@@ -650,6 +650,10 @@ video[poster]{
   transform: translateY(1em);
 }
 
+.img__description {
+  text-decoration: underline;
+}
+
 .area2:hover .img__description {
   transform: translateY(0);
 }
