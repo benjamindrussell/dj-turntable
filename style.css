@@ -82,8 +82,8 @@ border: 1px solid #3231ab;
 border-radius:3px;
 } 
 audio {
-   border: 1px solid #3231ab;
-   border-radius:3px;
+   border: 2px solid #3231ab;
+   border-radius:28px;
 }
 video[poster]{
    object-fit:cover; 
